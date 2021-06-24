@@ -11,6 +11,11 @@ app.get("/about-us",(req,res)=>{
     
 });
 
+app.get("/user-detail",(req,res)=>{
+    res.json({id:"121",user:"Raman",balance:"12000"})
+    
+});
+
 app.get("/ab*cd",()=>{
     res.send("I am regex page");
 });
