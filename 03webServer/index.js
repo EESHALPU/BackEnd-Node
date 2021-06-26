@@ -7,7 +7,7 @@ app.get("/",(req,res)=>{
 
 
 app.get("/about-us",(req,res)=>{
-    res.json({id:"121",user:"Raman",balance:"12000"})
+    res.status(200).json({id:"121",user:"Raman",balance:"12000"})
     
 });
 
