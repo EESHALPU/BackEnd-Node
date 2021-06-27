@@ -6,10 +6,16 @@ var myconsolelog=function(req,res,next){
     console.log("I am a MiddleWare");
     next();
 }
-app.use(myconsolelog);
+
+var serverTime=function(req,res,next){
+    req.requestTime=Date.now();
+    next();
+}
+
+app.use(serverTime);
 
 app.get("/",(req,res)=>{
-    res.send("Hello World");
+    res.send("Hello World"+" and Time is : "+req.requestTime);
     console.log("Hello world from /")
 });
 
